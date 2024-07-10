@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:login_screen/utils/global_colors.dart';
 
 class SocialLogin extends StatelessWidget {
@@ -17,7 +18,19 @@ class SocialLogin extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-        )
+        ),
+        const SizedBox(height: 15),
+        Row(
+          children: [
+            Container(
+              alignment: Alignment.center,
+              child: SvgPicture.asset(
+                'assets/images/google.svg',
+                height: 30,
+              ),
+            )
+          ],
+        ),
       ],
     );
   }
